@@ -1,0 +1,5 @@
+[
+  { "tipovehiculoId": "1j2k3l4m-4567-1234-890a-2b3c4d5e6f7g", "nombre": "Auto", "tarifa": 100 },
+  { "tipovehiculoId": "2k3l4m5n-5678-2345-901b-3c4d5e6f7g8h", "nombre": "Moto", "tarifa": 50 },
+  { "tipovehiculoId": "3l4m5n6o-6789-3456-012c-4d5e6f7g8h9i", "nombre": "Camioneta", "tarifa": 150 }
+]

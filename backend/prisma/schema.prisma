@@ -1,0 +1,106 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Bloque {
+  bloqueId String @id @default(uuid())
+  nombre String
+  Espacio Espacio[]
+}
+
+model Espacio { 
+  espacioId String @id @default(uuid())
+  bloqueId String
+  nombre String   
+  estado  EstadoEspacio @default(DISPONIBLE)
+  bloque Bloque @relation(fields: [bloqueId],references: [bloqueId]) 
+  Comprobante Comprobante[]
+}
+
+enum EstadoEspacio {
+  DISPONIBLE
+  OCUPADO
+  MANTENIMIENTO
+}
+
+model Tipovehiculo{
+  tipovehiculoId String @id @default(uuid())
+  nombre String @unique
+  tarifa  Int
+  Vehiculo Vehiculo[]
+}
+
+model Customer{
+  customerId String @id @default(uuid())
+  dni String @unique
+  name String 
+  lastname String
+  celphone String
+  direccion String
+  Comprobante Comprobante[]
+}
+
+model Users{
+  userId String @id @default(uuid())
+  dni String @unique
+  name String 
+  lastname String
+  celphone String
+  direccion String
+  email String @unique
+  password String 
+}
+
+model Vehiculo{
+  vehiculoId String @id @default(uuid())
+  tipovehiculoId String
+  nplaca String  @unique
+  marca String 
+  modelo String
+  color String
+  cantidad Int
+  tipovehiculo Tipovehiculo @relation(fields: [tipovehiculoId],references: [tipovehiculoId])
+  Comprobante Comprobante[]
+}
+
+model Empresa {
+  empresaId String @id @default(uuid())
+  ruc String @unique
+  name String
+  imagen String? // Campo para almacenar la imagen en formato Base64  
+}
+
+
+model Comprobante {
+  comprobanteId String @id @default(uuid())
+  vehiculoId String
+  customerId String
+  espacioId String
+  fechaentrada DateTime
+  fechasalida DateTime?
+  descripcion String?
+  estadoComp String 
+  vehiculo Vehiculo @relation(fields: [vehiculoId], references: [vehiculoId]) 
+  customer Customer @relation(fields: [customerId],references: [customerId])  
+  espacio Espacio @relation(fields: [espacioId], references: [espacioId])
+  Detallecomprobante DetalleComprobante[]
+}
+
+
+model DetalleComprobante {
+  dcId String @id @default(uuid())
+  comprobanteId String   
+  importetotal Int
+  Comprobante Comprobante @relation(fields: [comprobanteId],references: [comprobanteId])  
+}
+

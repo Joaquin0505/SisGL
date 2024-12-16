@@ -1,0 +1,16 @@
+[
+  {
+    "comprobanteId": "1y2z3a4b-9012-5678-234o-10000a",
+    "vehiculoId": "1s2t3u4v-3456-9012-678i-1j2k3l4m5n6o",
+    "customerId": "1m2n3o4p-7890-3456-012c-5d6e7f8g9h0i", 
+    "espacioId": "2d9ce9ef-5495-4d18-a205-053e52c4f0ba",
+    "fechaentrada": "2024-11-01T10:00:00Z",
+    "fechasalida": "2023-11-01T10:00:00Z",
+    "descripcion": "Ingreso a estacionamiento",
+    "estadoComp": "PAGADO" 
+  }
+]
+
+
+
+

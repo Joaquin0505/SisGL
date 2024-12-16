@@ -1,0 +1,6 @@
+[
+  { "vehiculoId": "1s2t3u4v-3456-9012-678i-1j2k3l4m5n6o", "tipovehiculoId": "1j2k3l4m-4567-1234-890a-2b3c4d5e6f7g", "nplaca": "ABC123", "marca": "Toyota", "modelo": "Corolla", "color": "Rojo", "cantidad": 1 },
+  { "vehiculoId": "2t3u4v5w-4567-0123-789j-2k3l4m5n6o7p", "tipovehiculoId": "2k3l4m5n-5678-2345-901b-3c4d5e6f7g8h", "nplaca": "XYZ987", "marca": "Honda", "modelo": "Civic", "color": "Azul", "cantidad": 1 },
+  { "vehiculoId": "3u4v5w6x-5678-1234-890k-3l4m5n6o7p8q", "tipovehiculoId": "3l4m5n6o-6789-3456-012c-4d5e6f7g8h9i", "nplaca": "LMN456", "marca": "Ford", "modelo": "Escape", "color": "Negro", "cantidad": 2 }
+]
+

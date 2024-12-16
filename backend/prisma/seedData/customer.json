@@ -1,0 +1,5 @@
+[
+  { "customerId": "1m2n3o4p-7890-3456-012c-5d6e7f8g9h0i", "dni": "12345678", "name": "Juan", "lastname": "Perez", "celphone": "987654321", "direccion": "Av. Siempre Viva 123" },
+  { "customerId": "2n3o4p5q-8901-4567-123d-6e7f8g9h0i1j", "dni": "87654321", "name": "Ana", "lastname": "Gomez", "celphone": "987654322", "direccion": "Calle Falsa 456" },
+  { "customerId": "3o4p5q6r-9012-5678-234e-7f8g9h0i1j2k", "dni": "11223344", "name": "Carlos", "lastname": "Ramirez", "celphone": "987654323", "direccion": "Calle Falsa 456" }
+]
